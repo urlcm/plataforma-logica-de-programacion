@@ -1,0 +1,172 @@
+<div class="create-account">
+    <main class="box">
+        <h2>Crear una cuenta</h2>
+        <form action="" class="form-account">
+            <div class="account-data" *ngIf="isItemHidden == false">
+                <div class="item">
+                    <legend>Nombre</legend>
+                    <input type="text" required [(ngModel)]="user.nameUser" name="nameUser">
+                </div>
+                <div class="item">
+                    <legend>Apellido</legend>
+                    <input type="text" [(ngModel)]="user.lastname" name="lastname" required>
+                </div>
+                <div class="item">
+                    <legend>Correo</legend>
+                    <input type="email" [(ngModel)]="user.email" name="email" required>
+                </div>
+                <div class="item">
+                    <legend>Contraseña</legend>
+                    <input type="password" [(ngModel)]="user.password" name="password" required>
+                </div>
+                <div class="item">
+                    <legend>Confirmar contraseña</legend>
+                    <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+                </div>
+            </div>
+
+            <div *ngIf="idHiddenQuest == true">
+                <div class="quest">
+                    <h3>
+                        Te consideras:
+                    </h3>
+                    <div class="">
+                        <input type="radio" name="level" id="begginer" (click)="clickBegginer()">Principiante
+                    </div>
+                    <div class="">
+                        <input type="radio" name="level" id="medium" (click)="clickMedium()">Intermedio
+                    </div>
+                    <div class="">
+                        <input type="radio" name="level" id="medium" (click)="clickAdvanced()">Avanzado
+                    </div>
+                </div>
+
+                <div class="begginer" *ngIf="isSelectBegginer == true">
+                    <h3>
+                        Quiseras aprender sobre:
+                    </h3>
+
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Condionales simples: if, if-else', 'begginer')"
+                            [checked]="selectedTopics.begginer.includes('Condionales simples (if, if-else)')"><span>Condionales
+                            simples (if,
+                            if-else)</span>
+                    </div>
+
+                    <!--
+                           (change)="onCheckboxChange($event, '', 'begginer')"
+       [checked]="selectedTopics.begginer.includes('')"
+                    -->
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Bucles Básicos: for, while', 'begginer')"
+                            [checked]="selectedTopics.begginer.includes('Bucles Básicos: for, while')"><span>Bucles
+                            Básicos: for, while</span>
+                    </div>
+                    <div class="element">
+
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Operadores Lógicos: AND, OR, NOT', 'begginer')"
+                            [checked]="selectedTopics.begginer.includes('Operadores Lógicos: AND, OR, NOT')"><span>Operadores Lógicos: AND, OR, NOT</span>
+                    </div>
+                    <div class="element">
+
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Variables y constantes', 'begginer')"
+                            [checked]="selectedTopics.begginer.includes('Variables y constantes')"><span>Variables y constantes</span>
+                    </div>
+                    <div class="element">
+
+
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Tipos de datos', 'begginer')"
+                            [checked]="selectedTopics.begginer.includes('Tipos de datos')"><span>Tipos de datos</span>
+                    </div>
+
+
+
+                </div>
+                <div class="medium" *ngIf="isSelectMedium == true">
+                    <h3>
+                        Quiseras aprender sobre:
+                    </h3>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Condicionales Multiples', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Condicionales Multiples')"><span>Condicionales Multiples</span>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Bucles Anidados', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Bucles Anidados')"><span>Bucles Anidados</span>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Control de Bucles (break, continue)', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Control de Bucles (break, continue)')"><span>Control de Bucles (break,
+                            continue)</span>
+                    </div>
+
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Recursión Simple', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Recursión Simple')"><span>Recursión Simple</span>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Arrays/Listas', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Arrays/Listas')"><span>Arrays/Listas</span>
+
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Strings y manipulación', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Strings y manipulación')"><span>Strings y manipulación</span>
+
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Estructuras clave-valor (diccionarios)', 'medium')"
+                            [checked]="selectedTopics.medium.includes('Estructuras clave-valor (diccionarios)')"><span>Estructuras clave-valor
+                            (diccionarios)</span>
+                    </div>
+
+                </div>
+                <div class="advanced" *ngIf="isSelectAdvanced == true">
+                    <h3>
+                        Quiseras aprender sobre:
+                    </h3>
+
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Listas enlazadas (Simples dobles)', 'advanced')"
+                            [checked]="selectedTopics.advanced.includes('Listas enlazadas (Simples dobles)')"><span>Listas enlazadas (Simples dobles)</span>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Pilas y Colas (LIFO, FIFO)', 'advanced')"
+                            [checked]="selectedTopics.advanced.includes('Pilas y Colas (LIFO, FIFO)')"><span>Pilas y Colas (LIFO, FIFO)</span>
+
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Árboles y Grafos', 'advanced')"
+                            [checked]="selectedTopics.advanced.includes('Árboles y Grafos')"><span>Árboles y Grafos</span>
+
+                    </div>
+                    <div class="element">
+                        <input type="checkbox" name="" id="" class="answer"
+                            (change)="onCheckboxChange($event, 'Tablas Hash', 'advanced')"
+                            [checked]="selectedTopics.advanced.includes('Tablas Hash')"><span>Tablas Hash</span>
+                    </div>
+
+                </div>
+            </div>
+            <button class="next-button" (click)="nextPage()" [hidden]="isHiddenNext">Siguiente</button>
+            <button class="back-button" [hidden]="isHiddenBack" (click)="backPage()">Atrás</button>
+            <button class="create-account-button" [hidden]="isHidden" (click)="createAccount()">Crear cuenta</button>
+            <p *ngIf="isError" class="error">{{error}}</p>
+        </form>
+    </main>
+</div>

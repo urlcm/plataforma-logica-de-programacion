@@ -1,0 +1,18 @@
+<main class="login">
+    <div class="box">
+        <form action="" class="form-login">
+            <h1>Iniciar sesión</h1>
+            <div class="inputs-form">
+                <input type="text" name="" id="" placeholder="Correo" [(ngModel)]='email' name="email">
+            </div>
+            <div class="inputs-form">
+                <input type="text" placeholder="Contraseña" [(ngModel)]='password' name="password">
+            </div>
+            <p *ngIf="isError==true" class="error">{{error}}</p>
+            <button (click)="goHomeTab()" class="login-button" >Ingresar</button>
+            <!--FALTA HACER VALIDACION-->
+            <p class="no-account" (click)="goCreateAccount()">¿No tienes cuenta? Crea una</p>
+        </form>
+
+    </div>
+</main>

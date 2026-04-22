@@ -1,0 +1,11 @@
+package com.web_programming.tesis.Repository;
+
+import com.web_programming.tesis.Models.Exercise;
+import com.web_programming.tesis.Models.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface ExerciseRepository extends JpaRepository<Exercise,Integer> {
+    Exercise findByDescription(String Email);
+}

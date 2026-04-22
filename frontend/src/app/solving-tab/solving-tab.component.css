@@ -1,0 +1,57 @@
+/* Styles globales o del componente */
+main {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta el scroll del main */
+  background-color: var(--ivory-white-pp);
+  align-items: center;
+}
+
+.content-scrollable {
+  flex: 1;
+  overflow-y: auto; /* Scroll solo en el contenido */
+  padding: 20px;
+}
+
+.code, .user-response {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background-color: #fff8f4;
+  border-left: 6px solid var(--burnt-orange-pp);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  width: 90%;
+}
+
+.code-user{
+  white-space: pre-wrap;  
+  word-wrap: break-word;
+}
+
+.interactions {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+button {
+  background-color: var(--burnt-orange-pp);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8a4a;
+  transform: translateY(-2px);
+}

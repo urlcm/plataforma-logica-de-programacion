@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    background-color: var(--marine-blue-pp);
+    color: var(--ivory-white);
+    padding: .5rem;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 1.6rem;
+    margin: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    color: white;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+}
+
+.sidebar.open {
+    left: 0;
+    /* Slide in */
+    background-color: var(--marine-blue-pp);
+}
+
+.left,
+.right {
+    width: 50%;
+}
+
+#navbar, #logo {
+padding: .3rem;
+}
+
+#navbar:hover,
+#logo:hover {
+    cursor: pointer;
+}
+
+#logo {
+    float: right;
+}

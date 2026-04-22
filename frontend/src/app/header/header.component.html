@@ -1,0 +1,9 @@
+<header>
+    <ul class="sidebar" [class.open]="isSidebarOpen">
+        <!--<li class="active">Perfil</li>-->
+        <!--<li class="active">Problemas resueltos</li>-->
+        <li class="active" (click)="goToLogin()">cerrar</li>
+    </ul>
+    <div class="left"><i class="fa-solid fa-bars" id="navbar" (click)="toggleSidebar()"></i></div>
+    <div class="right"><i class="fa-solid fa-house" id="logo" (click)="goToHome()"></i></div>
+</header>

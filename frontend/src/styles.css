@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --marine-blue: #013A63;
+    --skt-blue: #2a9fd6;
+    --burnt-orange:#f26419;
+    --soft-peach:#f8cba6;
+    --ivory-white:#f9f9f9;
+    --charcoal-gray:#333333;
+
+    --marine-blue-pp:#14395F;
+    --sky-blue-pp:#8DD6FF;
+    --burnt-orange-pp:#FF9F6E;
+    --soft-peach-pp:#FFF4C1;
+    --ivory-white-pp:#FFFFF6;
+    --ivory-white-pp-v2:#FFFFEB;
+    --charcoal-gray-pp:#C6C6C6;;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}

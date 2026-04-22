@@ -1,0 +1,22 @@
+<div class="box">
+    <main class="home-tab">
+        <h2>Hola {{user.nameUser}} {{user.lastname}} 👋</h2>
+        <h3>Reto del dia</h3>
+        <section class="challenge">
+            <p class="challenge-day" (click)="goToProgrammingTab()" [(ngModel)]='exercise' name="exercise">
+                {{exercise.description}}</p>
+            <button (click)="getProgrammingProblem()" class="change-exercise">Cambiar ejercicio</button>
+        </section>
+        <section class="stadistic">
+            <div class="data">
+                <p>Estadisticas</p>
+                <p>Tiempo Promedio en realizar los ejercicios: 0</p>
+                <p>Mayor tiempo en realizar un ejercicio: 0</p>
+                <p>Menor tiempo en realizar un ejercicio: 0</p>
+            </div>
+            <div class="chart">
+                <canvas id="my_chart" #my_chart></canvas>
+            </div>
+        </section>
+    </main>
+</div>
