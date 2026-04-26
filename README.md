@@ -24,7 +24,23 @@ El sistema presenta ejercicios progresivos al usuario, evalúa sus respuestas y 
 
 ## 📸 Capturas de pantalla
 
-> 🔧 *Próximamente — se agregarán capturas de la interfaz y flujo de uso*
+<img width="1542" height="1020" alt="Image" src="https://github.com/user-attachments/assets/75d74954-0aea-4d06-9798-481ead9bd3af" />
+<br>
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9e30ed2d-565e-49e4-9027-6a89de71bc9a" />
+<br>
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/e18e0826-a79e-4dd9-aaa1-a665a4de0fac" />
+
+---
+
+## Lógica del programa
+
+<p align="center" >
+  <img width="581" height="1164" alt="Diagrama de flujo" src="https://github.com/user-attachments/assets/0cb8e053-3572-4bb8-b6f7-7c095894ad1b"/>  
+</p>
+
+Como se aprecia en la siguiente figura el sistema se compila directamente desde el equipo de desarrollo, el cual hace llamadas desde las vistas (Front-end) hacia el servidor (Back-end) que se encarga de realizar las llamadas a las APIS externas y a la base de datos de forma local.
+
+<img width="921" height="495" alt="Image" src="https://github.com/user-attachments/assets/1ad64629-c8d6-4fd5-80ef-459310b48795" />
 
 ---
 
