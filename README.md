@@ -91,11 +91,10 @@ plataforma-logica-de-programacion/
 
 | Método | Endpoint | Descripción |
 |---|---|---|
-| `POST` | `/api/auth/register` | Registro de nuevo usuario |
-| `POST` | `/api/auth/login` | Autenticación y generación de sesión |
-| `GET` | `/api/ejercicios` | Obtener lista de ejercicios disponibles |
-| `POST` | `/api/ejercicios/{id}/responder` | Enviar respuesta y recibir retroalimentación IA |
-| `GET` | `/api/usuarios/{id}/progreso` | Consultar historial y progreso del usuario |
+| `GET` | `/plataforma-programuat/login` | Generación de sesión |
+| `POST` | `/plataforma-programuat/create-account/{user}` | Registro de nuevo usuario |
+| `GET` | `/plataforma-programuat/get-exercises` | Obtener lista de ejercicios disponibles |
+| `GET` | `/plataforma-programuat/generate/{promtMessage}` | Enviar inputs y outputs del ejercicio y usuario para compararlo y validar respuestas  |
 
 ---
 
